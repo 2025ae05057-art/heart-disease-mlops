@@ -1,0 +1,16 @@
+# Apply AFTER installing kube-prometheus-stack (it provides the ServiceMonitor CRD).
+# The "release" label must match your Helm release name (here: monitoring).
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: heart-api
+  labels:
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: heart-api
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s

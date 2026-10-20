@@ -1,0 +1,1 @@
+Store your own genuine screenshots here: Docker build/run, API health/predict, Kubernetes rollout/pods/service, GitHub Actions, MLflow, and Prometheus/Grafana. Do not include screenshots for steps you have not actually run.
